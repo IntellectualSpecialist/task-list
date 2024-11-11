@@ -1,6 +1,5 @@
 import { observer } from "mobx-react-lite";
 import { todo } from "./stores/todo";
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
 
 const Todo = observer(() => {
   return (
