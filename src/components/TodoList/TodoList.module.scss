@@ -1,0 +1,11 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.todolist {
+  @include list-reset;
+
+  width: 50%;
+  padding: 35px;
+  padding-right: 34px;
+  background-color: $base-white;
+}

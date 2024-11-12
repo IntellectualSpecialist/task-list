@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+
+.tasktext {
+  width: 50%;
+  padding: 36px 43px;
+}
+
+.tasktext__title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: $black;
+}
+
+.tasktext__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: $black;
+}

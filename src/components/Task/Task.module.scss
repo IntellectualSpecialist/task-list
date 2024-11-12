@@ -1,0 +1,119 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.task {
+  &:hover,
+  &--active {
+    background-color: $bg-task;
+  }
+}
+
+.task__header {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px;
+}
+
+.task__title {
+  width: 305px;
+  height: 21px;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20.8px;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+
+  &_sub {
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 400;
+  }
+}
+
+.task__button {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  margin-right: 12px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background-image: url("../../assets/img/icon-arrow.svg");
+    background-position: center;
+    transform: translate(-50%, -50%);
+    transition: 0.2s ease;
+  }
+
+  &_active {
+    &::before {
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+  }
+}
+
+.task__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-left: 8px;
+  width: 24px;
+  height: 24px;
+  background-color: $base-white;
+  border: 2px solid $lite-grey;
+  border-radius: 1px;
+  appearance: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: none;
+    width: 16px;
+    height: 16px;
+    background-image: url("../../assets/img/icon-check.svg");
+  }
+
+  &:hover {
+    border-color: $blue;
+  }
+
+  &:checked {
+    background-color: $blue;
+    border-color: $blue;
+
+    &::before {
+      display: block;
+    }
+  }
+
+  &_sub {
+    width: 18px;
+    height: 18px;
+
+    &:before {
+      width: 21px;
+      height: 12px;
+      background-size: 12px 12px;
+    }
+  }
+}
+
+.task__sublist {
+  @include list-reset;
+
+  margin-left: 14px;
+  padding-top: 4px;
+}
