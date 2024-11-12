@@ -1,5 +1,3 @@
-import { observer } from "mobx-react-lite";
-import { todo } from "../../stores/todo";
 import styles from './TaskText.module.scss';
 
 const TaskText = () => {
